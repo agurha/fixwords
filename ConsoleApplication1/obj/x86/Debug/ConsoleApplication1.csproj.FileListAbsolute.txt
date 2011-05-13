@@ -1,0 +1,13 @@
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\DataPopulator.dll
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\DataPopulator.pdb
+C:\LearningProj\WpfApplication3\ConsoleApplication1\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\LearningProj\WpfApplication3\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.exe
+C:\LearningProj\WpfApplication3\ConsoleApplication1\obj\x86\Debug\ConsoleApplication1.pdb
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\AllWords.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\DataFile.xml
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\freqfiltered.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\new-super.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\new-words.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config

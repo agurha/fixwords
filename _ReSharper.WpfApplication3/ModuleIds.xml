@@ -1,0 +1,7 @@
+<Modules>
+  <Module PersistentId="A1A479F0-14A7-4089-99D2-77B211555228" ModuleId="WpfApplication3" />
+  <Module PersistentId="E6820A2B-A2AF-4AE3-86B9-3AD8210346BA" ModuleId="DataPopulator" />
+  <Module PersistentId="System.Xml.Linq, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" ModuleId="System.Xml.Linq" />
+  <Module PersistentId="05566902-B91A-4528-9FD6-AC08B434CB42" ModuleId="ConsoleApplication1" />
+  <Module PersistentId="MultiComboBox, Version=1.0.0.0, Culture=neutral" ModuleId="MultiComboBox" />
+</Modules>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="dlnaspect01" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=MLON12U11025C\ULNSEDRV06;Initial Catalog=dlnaspect01;Integrated Security=True" SettingsObjectName="ConsoleApplication1.Properties.Settings" SettingsPropertyName="dlnaspect01ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="[CSFB\agurha1].Dim_Over" Member="Dim_Overs">
+    <Type Name="Dim_Over">
+      <Column Name="id" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="displayed" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Pk" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="[CSFB\agurha1].Dim_Out" Member="Dim_Outs">
+    <Type Name="Dim_Out">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="comb" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="wd" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

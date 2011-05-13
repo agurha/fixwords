@@ -1,0 +1,7 @@
+C:\LearningProj\WpfApplication3\DataPopulator\bin\Debug\DataPopulator.dll
+C:\LearningProj\WpfApplication3\DataPopulator\bin\Debug\DataPopulator.pdb
+C:\LearningProj\WpfApplication3\DataPopulator\obj\Debug\ResolveAssemblyReference.cache
+C:\LearningProj\WpfApplication3\DataPopulator\obj\Debug\DataPopulator.dll
+C:\LearningProj\WpfApplication3\DataPopulator\obj\Debug\DataPopulator.pdb
+C:\LearningProj\WpfApplication3\DataPopulator\bin\Debug\AllWords.txt
+C:\LearningProj\WpfApplication3\DataPopulator\bin\Debug\DataFile.xml

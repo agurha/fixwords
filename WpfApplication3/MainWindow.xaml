@@ -1,0 +1,68 @@
+﻿<Window x:Class="WpfApplication3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:src="clr-namespace:CustomControls;assembly=MultiComboBox" Title="MainWindow" Height="500" Width="525">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        
+        <GroupBox Grid.Row="1" Margin="0,10,0,0"  Header="Multiple Selection">
+            
+          
+            
+            <Grid Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel>
+                <TextBlock Margin="10" x:Name="statusBox" />
+                <TextBlock Text="Selected Items Viewed in Text Box:" />
+                </StackPanel>
+                <TextBox Margin="0,5,0,0" Grid.Row="1" Height="30"
+                         Text="{Binding Path=SelectedWords, Mode=OneWay}" />
+
+                <!--<TextBlock Margin="0,20,0,0" Grid.Row="2" Grid.Column="0" 
+                           TextWrapping="Wrap"
+                           Text="Two Multi Select Combo Boxs, which stay in sync because they are bound to the same ObservableCollection: "  
+                           />-->
+                <!--<src:MultiComboBox Margin="0,5,0,0" Name="selectedItems1" Grid.Row="3" SelectionMode="Multiple" 
+                                 VerticalAlignment="Center"
+                                 IsCreateNewEnabled="True"
+                                 ItemsSource="{Binding Animals}"
+                                 SelectedItems="{Binding SelectedAnimals}">
+                    <src:MultiComboBox.DisplaySeparator>
+                        <Ellipse Margin="3,0" Height="4" Width="4" Fill="Black"/>
+                    </src:MultiComboBox.DisplaySeparator>
+                </src:MultiComboBox>-->
+                
+                <StackPanel Grid.Row="3" Orientation="Horizontal">
+                    <TextBox x:Name="txtBox1" IsEnabled="False" Width="200" Height="30" Margin="50" ></TextBox>
+                    <Button Content="Get New Word" Click="Button_Click" Width="100" Height="30"></Button>
+                </StackPanel>
+
+                <StackPanel Grid.Row="4" Orientation="Vertical">
+
+                    <Button Content="Fetch Anagrams for above word" Click="Button_Click_1" Width="200" Height="30" Margin="10"></Button>
+
+                        <src:MultiComboBox Margin="0,10,0,0" SelectionMode="Multiple" Height="30"
+                                 VerticalAlignment="Center"
+                                 IsCreateNewEnabled="True"
+                                 DisplaySeparator=", "
+                                 ItemsSource="{Binding WordsGeneratedByAlgo}"
+                                 SelectedItems="{Binding SelectedWords}">
+
+                </src:MultiComboBox>
+                    
+                    <Button Content="Commit" Width="200" Click="Button_Click_2" Height="30" Margin="30"></Button>
+                </StackPanel>
+            </Grid>
+        </GroupBox>
+
+    </Grid>
+</Window>

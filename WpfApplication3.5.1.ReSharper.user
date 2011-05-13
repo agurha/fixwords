@@ -1,0 +1,305 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:new-words.txt" caret="0" fromTop="0" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:App.config" caret="432" fromTop="2" />
+      <File id="E6820A2B-A2AF-4AE3-86B9-3AD8210346BA/f:AllWords.txt" caret="34" fromTop="3" />
+      <File id="E6820A2B-A2AF-4AE3-86B9-3AD8210346BA/f:DataFile.xml" caret="0" fromTop="0" />
+      <File id="E6820A2B-A2AF-4AE3-86B9-3AD8210346BA/f:BuildXmlDataFile.cs" caret="1054" fromTop="37" />
+      <File id="d:Miscellaneous Files/f:MultiComboBox.cs/l:C!?mydownloads?multiselect?MultiSelectComboBox?MultiSelectComboBox?MultiComboBox.cs" caret="3864" fromTop="42" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:MainWindow.xaml" caret="1062" fromTop="11" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DataClasses1.designer.cs" caret="2409" fromTop="25" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:freqfiltered.txt" caret="0" fromTop="0" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:AnagramDawg.cs" caret="0" fromTop="0" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:freqfiltered.txt" caret="0" fromTop="0" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DAL.cs" caret="905" fromTop="27" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DataSource.cs" caret="1906" fromTop="0" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:MainWindow.xaml.cs" caret="2627" fromTop="45" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:AnagramDawg.cs" caret="0" fromTop="0" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="5201" fromTop="8" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DAL.cs" caret="1285" fromTop="44" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DAL.cs" caret="1507" fromTop="49" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DAL.cs" caret="1156" fromTop="40" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:MainWindow.xaml.cs" caret="1734" fromTop="17" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="831" fromTop="29" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="1303" fromTop="42" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="6300" fromTop="50" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="5491" fromTop="45" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="1634" fromTop="33" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="1552" fromTop="41" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="2649" fromTop="33" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="2649" fromTop="28" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="4138" fromTop="32" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="354" fromTop="15" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="3557" fromTop="34" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="1990" fromTop="10" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="2458" fromTop="24" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="3527" fromTop="36" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="3218" fromTop="21" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="3070" fromTop="16" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="3440" fromTop="31" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="2392" fromTop="42" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="3006" fromTop="30" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="2668" fromTop="11" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="4194" fromTop="23" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="4577" fromTop="34" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="5005" fromTop="50" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="4851" fromTop="31" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="605" fromTop="22" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="522" fromTop="22" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="public" priority="5" />
+      <Item value="DataSource`0" priority="0" />
+      <Item value="private" priority="10" />
+      <Item value="IEnumerable" priority="3" />
+      <Item value="string" priority="18" />
+      <Item value="var" priority="14" />
+      <Item value="_anagram" priority="0" />
+      <Item value="List" priority="5" />
+      <Item value="using" priority="3" />
+      <Item value="new" priority="22" />
+      <Item value="while" priority="1" />
+      <Item value="reader" priority="4" />
+      <Item value="if" priority="6" />
+      <Item value="word" priority="2" />
+      <Item value="yield return" priority="1" />
+      <Item value="splitted" priority="1" />
+      <Item value="return" priority="8" />
+      <Item value="byLength" priority="2" />
+      <Item value="_wordsGeneratedByAlgo" priority="1" />
+      <Item value="GetAnagramsForWord`0" priority="0" />
+      <Item value="void" priority="3" />
+      <Item value="XDocument`0" priority="0" />
+      <Item value="SetBaseUri" priority="0" />
+      <Item value="doc" priority="6" />
+      <Item value="String`0" priority="0" />
+      <Item value="r" priority="8" />
+      <Item value="XName" priority="1" />
+      <Item value="XElement`0" priority="0" />
+      <Item value="element" priority="0" />
+      <Item value="XElement" priority="0" />
+      <Item value="readonly" priority="0" />
+      <Item value="_masterData" priority="0" />
+      <Item value="BuildXmlDataFile" priority="1" />
+      <Item value="masterData" priority="0" />
+      <Item value="Console`0" priority="0" />
+      <Item value="SaveOptions`0" priority="0" />
+      <Item value="xwriter" priority="0" />
+      <Item value="DataClasses1DataContext`0" priority="1" />
+      <Item value="DataClasses1DataContext" priority="1" />
+      <Item value="context" priority="8" />
+      <Item value="wordsDetails" priority="0" />
+      <Item value="DAL`0" priority="1" />
+      <Item value="dal" priority="5" />
+      <Item value="DAL" priority="2" />
+      <Item value="static" priority="8" />
+      <Item value="_dal" priority="1" />
+      <Item value="_dawg" priority="0" />
+      <Item value="false" priority="0" />
+      <Item value="dataSource" priority="4" />
+      <Item value="txtBox1" priority="3" />
+      <Item value="singleWord" priority="0" />
+      <Item value="set" priority="0" />
+      <Item value="value" priority="0" />
+      <Item value="ObservableCollection&lt;string&gt;" priority="0" />
+      <Item value="OnPropertyChanged`0" priority="0" />
+      <Item value="allWords" priority="1" />
+      <Item value="SetResourceReference`0" priority="0" />
+      <Item value="strSelected" priority="0" />
+      <Item value="found" priority="0" />
+      <Item value="List&lt;string&gt;" priority="3" />
+      <Item value="foreach" priority="7" />
+      <Item value="s" priority="2" />
+      <Item value="_freqWords" priority="3" />
+      <Item value="this" priority="1" />
+      <Item value="else" priority="2" />
+      <Item value="freq" priority="0" />
+      <Item value="Dim_Out`0" priority="0" />
+      <Item value="Dim_Out" priority="0" />
+      <Item value="goodOnes" priority="2" />
+      <Item value="idWord" priority="3" />
+      <Item value="generated" priority="0" />
+      <Item value="notDuplicatedOne" priority="0" />
+      <Item value="Dim_Over`0" priority="0" />
+      <Item value="Dim_Over" priority="0" />
+      <Item value="OverflowException`0" priority="0" />
+      <Item value="ov" priority="0" />
+      <Item value="true" priority="2" />
+      <Item value="from" priority="0" />
+      <Item value="where" priority="0" />
+      <Item value="i" priority="0" />
+      <Item value="select" priority="0" />
+      <Item value="over" priority="0" />
+      <Item value="bigList" priority="1" />
+      <Item value="HashSet" priority="0" />
+      <Item value="HashSet&lt;string&gt;" priority="0" />
+      <Item value="bigHash" priority="1" />
+      <Item value="LoadFrequentWords`0" priority="0" />
+      <Item value="distinctList" priority="0" />
+      <Item value="frequentOnes" priority="0" />
+      <Item value="BuildWordList`0" priority="0" />
+      <Item value="ref" priority="3" />
+      <Item value="t" priority="0" />
+      <Item value="rta" priority="0" />
+      <Item value="StreamWriter`0" priority="0" />
+      <Item value="writer" priority="1" />
+      <Item value="StreamWriter" priority="0" />
+      <Item value="char" priority="0" />
+      <Item value="wd" priority="1" />
+      <Item value="getSuggestions`0" priority="1" />
+      <Item value="STAThread" priority="0" />
+      <Item value="int" priority="0" />
+      <Item value="spellingError" priority="2" />
+      <Item value="wpfTextBox" priority="2" />
+      <Item value="caretIndex" priority="0" />
+      <Item value="text" priority="3" />
+      <Item value="check" priority="1" />
+      <Item value="x" priority="0" />
+      <Item value="checkedList" priority="1" />
+      <Item value="ttt" priority="0" />
+      <Item value="suggestions" priority="0" />
+      <Item value="getexcept" priority="0" />
+      <Item value="null" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:AnagramSharp.AnagramDawg">
+      <Item value="FindForString`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamReader">
+      <Item value="Peek`0" priority="1" />
+      <Item value="ReadLine`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.String">
+      <Item value="IsNullOrEmpty`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Split`0" priority="1" />
+      <Item value="Trim`0" priority="0" />
+      <Item value="ToUpper`0" priority="2" />
+      <Item value="Length" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Xml.Linq.XDocument">
+      <Item value="Load`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.Linq.XDocument">
+      <Item value="Elements`0" priority="0" />
+      <Item value="Descendants`0" priority="1" />
+      <Item value="Add`0" priority="0" />
+      <Item value="Element`0" priority="0" />
+      <Item value="Save`0" priority="1" />
+      <Item value="CreateWriter`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.IEnumerable`1">
+      <Item value="Where`1" priority="1" />
+      <Item value="First`1" priority="0" />
+      <Item value="FirstOrDefault`1" priority="0" />
+      <Item value="ToArray`1" priority="0" />
+      <Item value="ToList`1" priority="6" />
+      <Item value="Select`2" priority="1" />
+      <Item value="Except`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Xml.Linq.XElement">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:DataPopulator.BuildXmlDataFile">
+      <Item value="LoadTextFileAndBuildXmlDB`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="ReadKey`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Xml.Linq.SaveOptions">
+      <Item value="DisableFormatting" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfApplication3.DataClasses1DataContext">
+      <Item value="Dim_Overs" priority="3" />
+      <Item value="Dim_Outs" priority="1" />
+      <Item value="SubmitChanges`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Data.Linq.Table`1">
+      <Item value="Select`2" priority="0" />
+      <Item value="InsertOnSubmit`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IQueryable`1">
+      <Item value="Select`2" priority="2" />
+      <Item value="Where`1" priority="1" />
+      <Item value="ToArray`1" priority="0" />
+      <Item value="Single`1" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfApplication3.Dim_Over">
+      <Item value="id" priority="2" />
+      <Item value="displayed" priority="3" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfApplication3.DAL">
+      <Item value="GetWords`0" priority="1" />
+      <Item value="WriteToOut`0" priority="1" />
+      <Item value="UpdateStatus`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfApplication3.DataSource">
+      <Item value="AllWords`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBlock">
+      <Item value="Text" priority="2" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="Add`0" priority="4" />
+      <Item value="Except`1" priority="1" />
+      <Item value="AddRange`0" priority="0" />
+      <Item value="Distinct`1" priority="0" />
+      <Item value="OrderByDescending`2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfApplication3.MainWindow">
+      <Item value="LoadFrequentWords`0" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:WpfApplication3.Dim_Out">
+      <Item value="comb" priority="1" />
+      <Item value="id" priority="0" />
+      <Item value="wd" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.TextBox">
+      <Item value="Text" priority="1" />
+      <Item value="GetSpellingError`0" priority="0" />
+      <Item value="CaretIndex" priority="0" />
+      <Item value="SpellCheck" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:ConsoleApplication1.Program">
+      <Item value="GetWords`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.HashSet`1">
+      <Item value="Add`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Linq.IOrderedEnumerable`1">
+      <Item value="Distinct`1" priority="0" />
+      <Item value="ThenBy`2" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.StreamWriter">
+      <Item value="WriteLine`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Windows.Controls.SpellCheck">
+      <Item value="SpellingReform" priority="0" />
+      <Item value="CustomDictionaries" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+</Configuration>
