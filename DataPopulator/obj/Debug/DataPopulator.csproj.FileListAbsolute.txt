@@ -5,3 +5,10 @@ C:\LearningProj\WpfApplication3\DataPopulator\obj\Debug\DataPopulator.dll
 C:\LearningProj\WpfApplication3\DataPopulator\obj\Debug\DataPopulator.pdb
 C:\LearningProj\WpfApplication3\DataPopulator\bin\Debug\AllWords.txt
 C:\LearningProj\WpfApplication3\DataPopulator\bin\Debug\DataFile.xml
+D:\Users\agurha\fixwords\fixwords\DataPopulator\bin\Debug\DataFile.xml
+D:\Users\agurha\fixwords\fixwords\DataPopulator\bin\Debug\AllWords.txt
+D:\Users\agurha\fixwords\fixwords\DataPopulator\bin\Debug\DataPopulator.dll
+D:\Users\agurha\fixwords\fixwords\DataPopulator\bin\Debug\DataPopulator.pdb
+D:\Users\agurha\fixwords\fixwords\DataPopulator\obj\Debug\ResolveAssemblyReference.cache
+D:\Users\agurha\fixwords\fixwords\DataPopulator\obj\Debug\DataPopulator.dll
+D:\Users\agurha\fixwords\fixwords\DataPopulator\obj\Debug\DataPopulator.pdb

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using AnagramSharp;
 using DataPopulator;
 using System.Windows.Controls;
@@ -11,24 +12,406 @@ namespace ConsoleApplication1
 {
     class Program
     {
+
+        private static void BuildDict()
+        {
+            HashSet<string> brits = new HashSet<string>();
+            using (var reader = new StreamReader(@"bigcorpous.txt"))
+            {
+                while (reader.Peek() > 0)
+                {
+                    string word = reader.ReadLine();
+
+                  
+                    if (!string.IsNullOrEmpty(word))
+                    {
+
+                        if (!Regex.IsMatch(word, "[^a-zA-Z]"))
+                        {
+                            if (word.Length >= 3 || word.Length <=7)
+                            {
+                                brits.Add(word.ToUpper());
+                            }
+                        }
+                    }
+                }
+            }
+
+            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\ankurdict.txt"))
+            {
+                foreach (var wd in brits)
+                {
+
+                    writer.WriteLine(wd.ToUpper());
+
+                }
+            }
+
+
+        }
+
+
         private static  AnagramDawg _anagram;
         private static  SharpDawg _dawg;
+
+
+        private static HashSet<string> finalList;
 
         [STAThread]
         static void Main(string[] args)
         {
+
+            finalList = new HashSet<string>();
+
+           // BuildDict();
             _dawg = new SharpDawg();
             _anagram = new AnagramDawg(_dawg);
 
-            checkone("ess");
+            GetReallyFreqWords();
 
-            //BuildWordList();
+           // GetBritishWords();
+           // ValidateWordList();
+
+
+           // checkone("bys");
+
+           // BuildWordList();
 
             //var x =  getSuggestions("bys");
 
             Console.ReadKey(true);
 
         }
+
+        private static  void GetReallyFreqWords()
+        {
+            HashSet<string> brits = new HashSet<string>();
+            using (var reader = new StreamReader(@"bnc.txt"))
+            {
+                while (reader.Peek() > 0)
+                {
+                    string word = reader.ReadLine();
+
+                    // string[] splitted = word.Split('/');
+
+                    if (!string.IsNullOrEmpty(word))
+                    {
+                        
+
+                       
+
+                        
+                        if (!Regex.IsMatch(word, "[^a-zA-Z]"))
+                        {
+                            if (word.Length == 7 )
+                            {
+                                brits.Add(word.ToUpper());
+                            }
+                        }
+                    }
+                }
+            }
+
+            var moregood = GetBritishWords();
+
+            foreach (var ff in moregood)
+            {
+                brits.Add(ff);
+            }
+
+
+            var allValidated = ValidateWordList(brits.ToList());
+
+            var shuffled = allValidated.OrderBy(r => Guid.NewGuid());
+
+            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\wordsketchletters.txt"))
+            {
+                int count = 0;
+                foreach (var wd in shuffled)
+                {
+                    count++;
+
+                    string rt = string.Format("{0} {1}", wd.ToUpper(), count);
+
+                    writer.WriteLine(rt);
+
+                }
+            }
+
+            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\bestfreqlist.txt"))
+            {
+                foreach (var wd in finalList)
+                {
+
+                    writer.WriteLine(wd.ToUpper());
+
+                }
+            }
+
+           // return brits;
+        }
+
+
+        private static List<string> GetBritishWords()
+        {
+            List<string> brits = new List<string>();
+            using (var reader = new StreamReader(@"cen_GB.txt"))
+            {
+                while (reader.Peek() > 0)
+                {
+                    string word = reader.ReadLine();
+
+                    // string[] splitted = word.Split('/');
+                    
+                    if (!string.IsNullOrEmpty(word))
+                    {
+                        string[] splitted = word.Split('\t');
+
+                        string actual = splitted[0].ToUpper().Trim();
+
+                        string ss = splitted[1].Trim();
+                        int freq = Int32.Parse(String.IsNullOrEmpty(ss)? "0" : ss);
+
+                        if(!Regex.IsMatch(actual, "[^a-zA-Z]"))
+                        {
+                            if (actual.Length == 7 && freq >10)
+                            {
+                                brits.Add(actual);
+                            }
+                        }
+                    }
+                }
+           }
+
+//            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\improvedbritsevenletters.txt"))
+//            {
+//                foreach (var wd in brits)
+//                {
+//                   
+//                        writer.WriteLine(wd.ToUpper());
+//                   
+//                }
+//            }
+
+            return brits;
+        }
+
+        private static List<string>  ValidateWordList(List<string> allWords)
+        {
+            //var allWords = GetWords();
+            List<string> bigList = new List<string>();
+
+            List<string> smallList = new List<string>();
+            //HashSet<string> bigHash = new HashSet<string>();
+
+            LoadDict();
+
+           List<string> test = new List<string>(){"ANALYST"};
+
+            foreach (var word in test)
+            {
+                var results = _anagram.FindForString(word.ToLower());
+
+                var byLength = (from item in results
+                                where item.Length > 2
+                                orderby item.Length descending
+                                select item.ToUpper()).ToList();
+
+                
+
+                if(GetValidated(byLength))
+                {
+                    bigList.Add(word);
+                }
+
+                else
+                {
+                    smallList.Add(word);
+                }
+
+
+              //  bigList.AddRange(byLength);
+
+
+
+                //return byLength;
+            }
+
+
+            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\notenough.txt"))
+            {
+                foreach (var wd in smallList)
+                {
+
+                    writer.WriteLine(wd);
+
+                }
+            }
+
+            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\verygoodwords.txt"))
+            {
+                foreach (var wd in bigList)
+                {
+
+                    writer.WriteLine(wd);
+
+                }
+            }
+
+           // var morevalidate = GetValidWords().Select(r=> r.ToUpper()).ToList().Intersect(bigList).ToList();
+
+            return bigList;
+
+
+        }
+
+
+        private static bool GetValidated(List<string> masterArray)
+        {
+            //List<string> goodWords = new List<string>();
+            //using (var reader = new StreamReader(@"en_GB.txt"))
+            //{
+            //    while (reader.Peek() > 0)
+            //    {
+            //        string word = reader.ReadLine();
+
+            //        if (!string.IsNullOrEmpty(word))
+            //        {
+            //            string[] splitted = word.Split(',');
+            //           goodWords.Add(splitted[0]);
+            //        }
+            //    }
+
+            //    // return _freqWords;
+            //}
+
+           
+            var goodWords = _dict;
+
+
+           // var common = masterArray.Intersect(goodWords).ToList();
+
+            var x = masterArray.Where(r => r.Length == 3).ToList();
+
+//            foreach(var ww in x)
+//            {
+//                if(!goodWords.Contains(ww))
+//                {
+//                    masterArray.Remove(ww);
+//                }
+//            }
+
+            List<string> dictChecked = getSuggestions(masterArray);
+
+
+
+            if (dictChecked.Count >= 28)
+            {
+                int checkCount = dictChecked.Where(r => r.Length == 3).ToList().Count;
+                if(checkCount <12)
+                {
+                    Console.WriteLine("Hello");
+                }
+               
+                    var frequentOnes = LoadFrequentWords();
+
+                    foreach (var wd in dictChecked)
+                    {
+                        if (frequentOnes.ContainsKey(wd))
+                        {
+                            string finalWord = string.Format("{0},{1}", wd.ToUpper(), frequentOnes[wd]);
+                            finalList.Add(finalWord);
+                            //writer.WriteLine(finalWord);
+                        }
+                        else
+                        {
+                            string finalWord = string.Format("{0},{1}", wd.ToUpper(), 0);
+                            finalList.Add(finalWord);
+                        }
+                    }
+                
+                
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+            int threeCount = 0;
+            int fourCount = 0;
+            int fiveCount = 0;
+            int sixCount = 0;
+
+            foreach(var mer in masterArray)
+            {
+                if(mer.Length ==3)
+                {
+                    threeCount++;
+                }
+                if (mer.Length == 4)
+                {
+                    fourCount++;
+                }
+                if (mer.Length == 5)
+                {
+                    fiveCount++;
+                }
+                if (mer.Length == 6)
+                {
+                    sixCount++;
+                }
+               
+            }
+
+            //if (masterArray.Count > 30)
+            //{
+
+            //   // return true;
+
+                if ((threeCount >= 12) && (fourCount >= 8) && fiveCount >=4 && sixCount>=1)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            //}
+            //else
+            //{
+            //    return false;
+            //}
+
+        }
+
+        private static List<string> _dict;
+
+        private static void LoadDict()
+        {
+            if (_dict == null)
+            {
+                _dict = new List<string>();
+                using (var reader = new StreamReader(@"en_GB.txt"))
+                {
+                    while (reader.Peek() > 0)
+                    {
+                        string word = reader.ReadLine();
+
+                        if (!string.IsNullOrEmpty(word))
+                        {
+                            string[] splitted = word.Split(',');
+                            _dict.Add(splitted[0].ToUpper());
+                        }
+                    }
+
+                    // return _freqWords;
+                }
+            }
+        }
+
+
+        private static Dictionary<string, int> _frequenctDict;
 
         private static void BuildWordList()
         {
@@ -59,11 +442,11 @@ namespace ConsoleApplication1
             var distinctList = bigList.Distinct().Select(r => r.ToUpper()).ToList();
 
             
-            var frequentOnes = LoadFrequentWords().ToList();
+            var frequentOnes = LoadFrequentWords();
 
-            var getexcept = distinctList.Except(frequentOnes).OrderByDescending(r => r.Length)
-                                                            .ThenBy(t=>t)
-                                                            .Distinct().Except(allWords.Select(r=>r.ToUpper())).ToList();
+//            var getexcept = distinctList.Except(frequentOnes).OrderByDescending(r => r.Length)
+//                                                            .ThenBy(t=>t)
+//                                                            .Distinct().Except(allWords.Select(r=>r.ToUpper())).ToList();
 
 
             //List<string> checkedList = new List<string>();
@@ -78,17 +461,28 @@ namespace ConsoleApplication1
             //    }
             //}
 
-            var checkedList = getSuggestions(getexcept);
+
+
+           // var checkedList = getSuggestions(getexcept);
+
+            var valids = GetValidWords().Select(r => r.ToUpper()).ToList();
+            var checkedList = distinctList.Intersect(valids).ToList();
 
 
 
-            using(StreamWriter writer = new StreamWriter(@"c:\stupidWords5"))
+            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\goodwords1.txt"))
             {
                 foreach (var wd in checkedList)
                 {
-                    if (wd.Length < 7)
+                    if (frequentOnes.ContainsKey(wd))
                     {
-                        writer.WriteLine(wd);
+                        string finalWord = string.Format("{0},{1}", wd.ToUpper(), frequentOnes[wd]);
+                        writer.WriteLine(finalWord);
+                    }
+                    else
+                    {
+                        string finalWord = string.Format("{0},{1}", wd.ToUpper(), 0);
+                        writer.WriteLine(finalWord);
                     }
                 }
             }
@@ -111,18 +505,39 @@ namespace ConsoleApplication1
 
             foreach (var ttt in alltext)
             {
-                wpfTextBox.Text = ttt;
+                
+                 int index = 0;
+                 wpfTextBox.Text = ttt;
 
-                int index = 0;
+                Dictionary<int,string> spellingErrors = new Dictionary<int, string>();
+
+
+                while ((index = wpfTextBox.GetNextSpellingErrorCharacterIndex(index, System.Windows.Documents.LogicalDirection.Forward)) != -1)
+                {
+	                string currentError = wpfTextBox.Text.Substring(index,
+	                wpfTextBox.GetSpellingErrorLength(index));
+	                spellingErrors.Add(index, currentError);
+	                index += currentError.Length;
+                }
+                
+               
+
+              
                
 
 
                 int caretIndex = wpfTextBox.CaretIndex;
                 SpellingError spellingError;
 
+
+
                 spellingError = wpfTextBox.GetSpellingError(caretIndex);
 
-                if (spellingError != null)
+
+
+               
+
+                if (spellingError == null)
                 {
                     suggestions.Add(ttt);
                 }
@@ -157,8 +572,20 @@ namespace ConsoleApplication1
                 wpfTextBox.Text = text;
 
                 int index = 0;
-               
 
+            Dictionary<int, string> spellingErrors = new Dictionary<int, string>();
+                
+                while ((index = wpfTextBox.GetNextSpellingErrorCharacterIndex(index, System.Windows.Documents.LogicalDirection.Forward)) != -1)
+                {
+                    string currentError = wpfTextBox.Text.Substring(index,
+                    wpfTextBox.GetSpellingErrorLength(index));
+                    
+                    spellingErrors.Add(index, currentError);
+                    index += currentError.Length;
+                }
+
+
+       
 
                 int caretIndex = wpfTextBox.CaretIndex;
                 SpellingError spellingError;
@@ -178,22 +605,65 @@ namespace ConsoleApplication1
 
         public static IEnumerable<string> GetWords()
         {
-            using (DataClasses1DataContext context = new DataClasses1DataContext())
-            {
-                var wordsDetails = context.Dim_Overs.Select(r => r);
+            //using (DataClasses1DataContext context = new DataClasses1DataContext())
+            //{
+            //    var wordsDetails = context.Dim_Overs.Select(r => r);
 
-                return wordsDetails.Where(r => r.displayed == false).Select(r => r.id).ToArray();
+            //    return wordsDetails.Where(r => r.displayed == false).Select(r => r.id).ToArray();
+            //}
+
+            using (var reader = new StreamReader(@"britsevenletters.txt"))
+            {
+                while (reader.Peek() > 0)
+                {
+                    string word = reader.ReadLine();
+
+                    if (!string.IsNullOrEmpty(word))
+                    {
+                        yield return word;
+                    }
+                }
+
+               // return _freqWords;
             }
         }
 
-        private static List<string> _freqWords;
-
-        private static IEnumerable<string> LoadFrequentWords()
+        public static IEnumerable<string> GetValidWords()
         {
+            //using (DataClasses1DataContext context = new DataClasses1DataContext())
+            //{
+            //    var wordsDetails = context.Dim_Overs.Select(r => r);
 
-            if (_freqWords == null)
+            //    return wordsDetails.Where(r => r.displayed == false).Select(r => r.id).ToArray();
+            //}
+
+            using (var reader = new StreamReader(@"en_GB.txt"))
             {
-                _freqWords = new List<string>();
+                while (reader.Peek() > 0)
+                {
+                    string word = reader.ReadLine();
+
+                   // string[] splitted = word.Split('/');
+
+                    if (!string.IsNullOrEmpty(word))
+                    {
+                        yield return word;
+                    }
+                }
+
+                // return _freqWords;
+            }
+        }
+
+       // private static List<string> _freqWords;
+
+        private static Dictionary<string,int> LoadFrequentWords()
+        {
+          //  Dictionary<string ,int> freq = new Dictionary<string, int>();
+
+            if(_frequenctDict == null)
+            {
+                _frequenctDict = new Dictionary<string, int>();
                 using (var reader = new StreamReader(@"freqfiltered.txt"))
                 {
                     while (reader.Peek() > 0)
@@ -203,17 +673,27 @@ namespace ConsoleApplication1
                         if (!string.IsNullOrEmpty(word))
                         {
                             string[] splitted = word.Split(',');
-                            _freqWords.Add(splitted[0]);
+                            if (!_frequenctDict.ContainsKey(splitted[0]))
+                            {
+                                _frequenctDict.Add(splitted[0], Int32.Parse(splitted[1]));
+                            }
                         }
                     }
-
-                    return _freqWords;
                 }
+
+                return _frequenctDict;
             }
+
             else
             {
-                return _freqWords;
+                return _frequenctDict;
             }
+
+         
         }
+
+       
     }
+
+    
 }
