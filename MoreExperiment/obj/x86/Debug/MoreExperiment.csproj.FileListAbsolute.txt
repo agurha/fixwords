@@ -1,0 +1,6 @@
+C:\LearningProj\WpfApplication3\MoreExperiment\bin\Debug\allwords.txt
+C:\LearningProj\WpfApplication3\MoreExperiment\bin\Debug\MoreExperiment.exe
+C:\LearningProj\WpfApplication3\MoreExperiment\bin\Debug\MoreExperiment.pdb
+C:\LearningProj\WpfApplication3\MoreExperiment\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\LearningProj\WpfApplication3\MoreExperiment\obj\x86\Debug\MoreExperiment.exe
+C:\LearningProj\WpfApplication3\MoreExperiment\obj\x86\Debug\MoreExperiment.pdb
