@@ -32,3 +32,11 @@ D:\Users\agurha\fixwords\fixwords\ConsoleApplication1\bin\Debug\bnc.txt
 D:\Users\agurha\fixwords\fixwords\ConsoleApplication1\bin\Debug\secondbnc.txt
 D:\Users\agurha\fixwords\fixwords\ConsoleApplication1\bin\Debug\bigcorpous.txt
 D:\Users\agurha\fixwords\fixwords\ConsoleApplication1\bin\Debug\ankurdict.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\ankurdict.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\bigcorpous.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\bnc.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\britsevenletters.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\cen_GB.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\en_GB.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\goodwords1.txt
+C:\LearningProj\WpfApplication3\ConsoleApplication1\bin\Debug\secondbnc.txt

@@ -91,16 +91,8 @@ namespace ConsoleApplication1
                 while (reader.Peek() > 0)
                 {
                     string word = reader.ReadLine();
-
-                    // string[] splitted = word.Split('/');
-
                     if (!string.IsNullOrEmpty(word))
                     {
-                        
-
-                       
-
-                        
                         if (!Regex.IsMatch(word, "[^a-zA-Z]"))
                         {
                             if (word.Length == 7 )
@@ -119,12 +111,18 @@ namespace ConsoleApplication1
                 brits.Add(ff);
             }
 
+            var somemore = GetGoogleNGramWords();
+
+            foreach (var ff in somemore)
+            {
+                brits.Add(ff);
+            }
 
             var allValidated = ValidateWordList(brits.ToList());
 
             var shuffled = allValidated.OrderBy(r => Guid.NewGuid());
 
-            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\wordsketchletters.txt"))
+            using (StreamWriter writer = new StreamWriter(@"C:\wordsketchletters.txt"))
             {
                 int count = 0;
                 foreach (var wd in shuffled)
@@ -138,7 +136,7 @@ namespace ConsoleApplication1
                 }
             }
 
-            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\bestfreqlist.txt"))
+            using (StreamWriter writer = new StreamWriter(@"C:\bestfreqlist.txt"))
             {
                 foreach (var wd in finalList)
                 {
@@ -147,8 +145,28 @@ namespace ConsoleApplication1
 
                 }
             }
+        }
 
-           // return brits;
+        private static List<string> GetGoogleNGramWords()
+        {
+            List<string> checkedList = new List<string>();
+
+            using (var reader = new StreamReader(@"allwords.txt"))
+            {
+                while (reader.Peek() > 0)
+                {
+                    string word = reader.ReadLine();
+
+                    if (!string.IsNullOrEmpty(word))
+                    {
+                        if (!String.IsNullOrEmpty(checkone(word)))
+                        {
+                            checkedList.Add(word);
+                        }
+                    }
+                }
+            }
+            return checkedList;
         }
 
 
@@ -182,33 +200,17 @@ namespace ConsoleApplication1
                     }
                 }
            }
-
-//            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\improvedbritsevenletters.txt"))
-//            {
-//                foreach (var wd in brits)
-//                {
-//                   
-//                        writer.WriteLine(wd.ToUpper());
-//                   
-//                }
-//            }
-
-            return brits;
+           return brits;
         }
 
         private static List<string>  ValidateWordList(List<string> allWords)
         {
-            //var allWords = GetWords();
             List<string> bigList = new List<string>();
-
             List<string> smallList = new List<string>();
-            //HashSet<string> bigHash = new HashSet<string>();
-
+           
             LoadDict();
 
-           List<string> test = new List<string>(){"ANALYST"};
-
-            foreach (var word in test)
+            foreach (var word in allWords)
             {
                 var results = _anagram.FindForString(word.ToLower());
 
@@ -217,101 +219,34 @@ namespace ConsoleApplication1
                                 orderby item.Length descending
                                 select item.ToUpper()).ToList();
 
-                
-
                 if(GetValidated(byLength))
                 {
                     bigList.Add(word);
                 }
-
                 else
                 {
                     smallList.Add(word);
                 }
 
-
-              //  bigList.AddRange(byLength);
-
-
-
-                //return byLength;
             }
-
-
-            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\notenough.txt"))
-            {
-                foreach (var wd in smallList)
-                {
-
-                    writer.WriteLine(wd);
-
-                }
-            }
-
-            using (StreamWriter writer = new StreamWriter(@"D:\Users\agurha\verygoodwords.txt"))
-            {
-                foreach (var wd in bigList)
-                {
-
-                    writer.WriteLine(wd);
-
-                }
-            }
-
-           // var morevalidate = GetValidWords().Select(r=> r.ToUpper()).ToList().Intersect(bigList).ToList();
 
             return bigList;
-
-
         }
 
 
         private static bool GetValidated(List<string> masterArray)
         {
-            //List<string> goodWords = new List<string>();
-            //using (var reader = new StreamReader(@"en_GB.txt"))
-            //{
-            //    while (reader.Peek() > 0)
-            //    {
-            //        string word = reader.ReadLine();
-
-            //        if (!string.IsNullOrEmpty(word))
-            //        {
-            //            string[] splitted = word.Split(',');
-            //           goodWords.Add(splitted[0]);
-            //        }
-            //    }
-
-            //    // return _freqWords;
-            //}
-
-           
             var goodWords = _dict;
-
-
-           // var common = masterArray.Intersect(goodWords).ToList();
-
             var x = masterArray.Where(r => r.Length == 3).ToList();
-
-//            foreach(var ww in x)
-//            {
-//                if(!goodWords.Contains(ww))
-//                {
-//                    masterArray.Remove(ww);
-//                }
-//            }
-
             List<string> dictChecked = getSuggestions(masterArray);
-
-
-
+            
             if (dictChecked.Count >= 28)
             {
-                int checkCount = dictChecked.Where(r => r.Length == 3).ToList().Count;
-                if(checkCount <12)
-                {
-                    Console.WriteLine("Hello");
-                }
+//                int checkCount = dictChecked.Where(r => r.Length == 3).ToList().Count;
+//                if(checkCount <12)
+//                {
+//                    Console.WriteLine("Hello");
+//                }
                
                     var frequentOnes = LoadFrequentWords();
 

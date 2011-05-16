@@ -11,27 +11,23 @@
     <RecentFiles>
       <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:new-words.txt" caret="0" fromTop="0" />
       <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:App.config" caret="432" fromTop="2" />
-      <File id="E6820A2B-A2AF-4AE3-86B9-3AD8210346BA/f:AllWords.txt" caret="34" fromTop="3" />
       <File id="E6820A2B-A2AF-4AE3-86B9-3AD8210346BA/f:DataFile.xml" caret="0" fromTop="0" />
       <File id="E6820A2B-A2AF-4AE3-86B9-3AD8210346BA/f:BuildXmlDataFile.cs" caret="1054" fromTop="37" />
-      <File id="d:Miscellaneous Files/f:MultiComboBox.cs/l:C!?mydownloads?multiselect?MultiSelectComboBox?MultiSelectComboBox?MultiComboBox.cs" caret="3864" fromTop="42" />
       <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:MainWindow.xaml" caret="1062" fromTop="11" />
       <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DataClasses1.designer.cs" caret="2409" fromTop="25" />
-      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:freqfiltered.txt" caret="0" fromTop="0" />
       <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:AnagramDawg.cs" caret="0" fromTop="0" />
       <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:freqfiltered.txt" caret="0" fromTop="0" />
       <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DAL.cs" caret="905" fromTop="27" />
       <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DataSource.cs" caret="1906" fromTop="0" />
       <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:MainWindow.xaml.cs" caret="2627" fromTop="45" />
       <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:AnagramDawg.cs" caret="0" fromTop="0" />
-      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="5201" fromTop="8" />
+      <File id="E6820A2B-A2AF-4AE3-86B9-3AD8210346BA/f:AllWords.txt" caret="0" fromTop="0" />
+      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:freqfiltered.txt" caret="0" fromTop="0" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:allwords.txt" caret="25117" fromTop="0" />
+      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="18370" fromTop="41" />
+      <File id="8F19E29C-15AA-4C89-BEAF-57DE7603B249/f:Program.cs" caret="454" fromTop="18" />
     </RecentFiles>
     <RecentEdits>
-      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DAL.cs" caret="1285" fromTop="44" />
-      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DAL.cs" caret="1507" fromTop="49" />
-      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:DAL.cs" caret="1156" fromTop="40" />
-      <File id="A1A479F0-14A7-4089-99D2-77B211555228/f:MainWindow.xaml.cs" caret="1734" fromTop="17" />
-      <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="831" fromTop="29" />
       <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="1303" fromTop="42" />
       <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="6300" fromTop="50" />
       <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="5491" fromTop="45" />
@@ -57,6 +53,11 @@
       <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="4851" fromTop="31" />
       <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="605" fromTop="22" />
       <File id="05566902-B91A-4528-9FD6-AC08B434CB42/f:Program.cs" caret="522" fromTop="22" />
+      <File id="8F19E29C-15AA-4C89-BEAF-57DE7603B249/f:Program.cs" caret="2161" fromTop="50" />
+      <File id="8F19E29C-15AA-4C89-BEAF-57DE7603B249/f:Program.cs" caret="1801" fromTop="23" />
+      <File id="8F19E29C-15AA-4C89-BEAF-57DE7603B249/f:Program.cs" caret="847" fromTop="25" />
+      <File id="8F19E29C-15AA-4C89-BEAF-57DE7603B249/f:Program.cs" caret="370" fromTop="13" />
+      <File id="8F19E29C-15AA-4C89-BEAF-57DE7603B249/f:Program.cs" caret="720" fromTop="25" />
     </RecentEdits>
   </RecentFiles>
   <NAntValidationSettings>
@@ -79,13 +80,13 @@
       <Item value="string" priority="18" />
       <Item value="var" priority="14" />
       <Item value="_anagram" priority="0" />
-      <Item value="List" priority="5" />
+      <Item value="List" priority="6" />
       <Item value="using" priority="3" />
-      <Item value="new" priority="22" />
+      <Item value="new" priority="23" />
       <Item value="while" priority="1" />
       <Item value="reader" priority="4" />
-      <Item value="if" priority="6" />
-      <Item value="word" priority="2" />
+      <Item value="if" priority="7" />
+      <Item value="word" priority="4" />
       <Item value="yield return" priority="1" />
       <Item value="splitted" priority="1" />
       <Item value="return" priority="8" />
@@ -96,7 +97,7 @@
       <Item value="XDocument`0" priority="0" />
       <Item value="SetBaseUri" priority="0" />
       <Item value="doc" priority="6" />
-      <Item value="String`0" priority="0" />
+      <Item value="String`0" priority="1" />
       <Item value="r" priority="8" />
       <Item value="XName" priority="1" />
       <Item value="XElement`0" priority="0" />
@@ -131,7 +132,7 @@
       <Item value="SetResourceReference`0" priority="0" />
       <Item value="strSelected" priority="0" />
       <Item value="found" priority="0" />
-      <Item value="List&lt;string&gt;" priority="3" />
+      <Item value="List&lt;string&gt;" priority="4" />
       <Item value="foreach" priority="7" />
       <Item value="s" priority="2" />
       <Item value="_freqWords" priority="3" />
@@ -179,7 +180,7 @@
       <Item value="text" priority="3" />
       <Item value="check" priority="1" />
       <Item value="x" priority="0" />
-      <Item value="checkedList" priority="1" />
+      <Item value="checkedList" priority="2" />
       <Item value="ttt" priority="0" />
       <Item value="suggestions" priority="0" />
       <Item value="getexcept" priority="0" />
@@ -193,7 +194,7 @@
       <Item value="ReadLine`0" priority="1" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:@System.String">
-      <Item value="IsNullOrEmpty`0" priority="1" />
+      <Item value="IsNullOrEmpty`0" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
       <Item value="Split`0" priority="1" />
@@ -264,7 +265,7 @@
       <Item value="Text" priority="2" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
-      <Item value="Add`0" priority="4" />
+      <Item value="Add`0" priority="5" />
       <Item value="Except`1" priority="1" />
       <Item value="AddRange`0" priority="0" />
       <Item value="Distinct`1" priority="0" />
